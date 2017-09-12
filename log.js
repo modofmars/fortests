@@ -1,2 +1,2 @@
 console.log("Hello Python\'s");
-console.log("My first git commit");
+console.log("3ий коммит");
