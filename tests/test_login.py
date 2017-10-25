@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pytest
 
-from fixture.Application import Application
+from fixture.application import Application
 from model.group import Group
 
 
@@ -13,12 +13,12 @@ def app(request):
 
 
 def test_fixber(app):
-    app.login(username="ultras", password="KzkMK")
+    app.session.login(username="ultras", password="KzkMK")
     app.edit_product_field(Group(product_kind="TeamCity Redmine Microsoft Visual Studio Python Python"))
-    app.logout()
+    app.session.logout()
 
 
 def test_fixber_another_data(app):
-    app.login(username="ultras", password="KzkMK")
+    app.session.login(username="ultras", password="KzkMK")
     app.edit_product_field(Group("rambler"))
-    app.logout()
+    app.session.logout()
